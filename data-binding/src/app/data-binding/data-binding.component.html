@@ -1,0 +1,78 @@
+<!--<section class="property-binding">
+    
+    <article>
+        <h3>Interpolation</h3>
+        <p>String renderizada com interpolação: {{ url }}</p>
+        <p>Resultado de 1 + 1 é: {{ 1 + 1 }}</p>
+        <p>Resultado de 1 + 1 não é: {{ 1 + 1 + getValor() }}</p>
+        <p>Curso de Angular e Gosto do curso: {{ cursoAngular && getCurtirCurso() }}</p>        
+    </article>
+
+    <article>
+        <h3>Property Binding</h3>
+        <img src="{{ urlImagem }}"> 
+        <img [src]="urlImagem">   linha 14 = 15
+        <img bind-src="urlImagem">        
+    </article>
+
+
+    <article>
+        <h3>Class & Style Binding</h3>
+        <div>
+            Selecione uma classe
+            <select #classe (change)="0">
+                <option value="alert-success">Sucesso</option>
+                <option value="alert-info">Info</option>
+                <option value="alert-warning">Alerta</option>
+                <option value="alert-danger">Erro</option>
+            </select>
+            <br><br>
+
+            <div class="alert {{ classe.value }}" role="alert">
+                Texto colorido de acordo com valor do combobox
+            </div>
+
+            <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">
+                A simple success alert
+            </div>
+            <div class="alert" role="alert" [class.alert-info]="classe.value == 'alert-info'">
+                A simple info alert
+            </div>
+            <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">
+                A simple warning alert
+            </div>
+            <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">
+                A simple danger alert
+            </div>
+
+            <div class="alert alert-danger" role="alert" [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+                Esse texto só aparece em caso de erro!!!
+            </div>
+
+        </div>
+
+    </article>
+
+</section>-->
+
+<section class="event-binding">
+    <article>
+        <h3>Event binding</h3>
+        <div>
+            <button (click)="botaoClick()" class="btn btn-primary">Click!</button>
+        
+            <br><br>
+        
+            
+
+            <p [hidden]="!formulario">Valor atual: {{ valorAtual }}</p>
+
+            <form (ngSubmit)="onSubmit()">
+                <input name="nome" type="text" [(ngModel)]="valorAtual"/>
+                <input type="submit" value="send">
+            </form>
+        
+        
+        </div>
+    </article>
+</section>
